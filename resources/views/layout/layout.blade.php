@@ -14,8 +14,12 @@
         <p class="mt-3">
             City Codes of Various Nepalese
         </p>
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning mb-3" role="alert">
             These are Mock Codes ans should not be used in any official or postal scenario
+        </div>
+        <div class="mb-3">
+            <a href="{{ route('create') }}" class="btn btn-danger">Add City</a>
+            <a href="/" class="btn btn-primary">Home</a>
         </div>
         @yield('contents')
     </div>
