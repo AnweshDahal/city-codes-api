@@ -13,6 +13,13 @@ use App\Http\Controllers\CityWebController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    return view('welcome');
+});
 
-Route::get('/', [CityWebController::class, 'index']);
-Route::get('/create', [CityWebController::class, 'create']);
+// GET Routes
+Route::get('/city', [CityWebController::class, 'index'])->name('index');
+Route::get('/city/create', [CityWebController::class, 'create'])->name('create');
+
+// POST Routes
+//Route::post('/city', [CityWebController::class, 'store'])->name('store');
