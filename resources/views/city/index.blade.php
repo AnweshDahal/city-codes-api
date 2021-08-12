@@ -1,5 +1,6 @@
 @extends ('layout.layout')
 @section('contents')
+    <a href="{{ route('create') }}" class="link">Add City</a>
     <table class="table">
         <thead>
             <tr>
