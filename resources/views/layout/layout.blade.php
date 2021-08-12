@@ -17,7 +17,7 @@
         <div class="alert alert-warning" role="alert">
             These are Mock Codes ans should not be used in any official or postal scenario
         </div>
-        @yield('section')
+        @yield('contents')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
