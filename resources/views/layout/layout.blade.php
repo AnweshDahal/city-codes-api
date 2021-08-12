@@ -9,14 +9,16 @@
     <title>City Codes</title>
 </head>
 <body>
-    <div class="display-1">City Codes</div>
-    <p class="text-light">
-        City Codes of Various Nepalese
-    </p>
-    <div class="alert alert-warning" role="alert">
-        These are Mock Codes ans should not be used in any official or postal scenario
+    <div class="container">
+        <div class="display-1">City Codes</div>
+        <p class="mt-3">
+            City Codes of Various Nepalese
+        </p>
+        <div class="alert alert-warning" role="alert">
+            These are Mock Codes ans should not be used in any official or postal scenario
+        </div>
+        @yield('section')
     </div>
-    @yield('section')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
