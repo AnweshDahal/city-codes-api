@@ -15,3 +15,4 @@ use App\Http\Controllers\CityWebController;
 */
 
 Route::get('/', [CityWebController::class, 'index']);
+Route::get('/create', [CityWebController::class, 'create']);
