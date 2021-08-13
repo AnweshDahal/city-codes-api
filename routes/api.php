@@ -15,7 +15,14 @@ use App\Http\Controllers\CityController;
 |
 */
 
+//Public Routes
+// Fetch all data
 Route::get('/city', [CityController::class, 'index']);
+// Fetch all data from a certain number of rows
+Route::get('/city/limit/{number}', [CityController::class, 'limit']);
+// Fetch code of a city
+Route::get('city/show/code/{name}', [CityController::class, 'show_code']);
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

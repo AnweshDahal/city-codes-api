@@ -7,14 +7,13 @@ use App\Models\City;
 
 class CityController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return City::all();
+        return City::select('name', 'code')->get();
+    }
+
+    public function limit($number){
+        return City::select('name', 'code')->take($number)->get();
     }
 
     /**
@@ -34,9 +33,9 @@ class CityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show_code($name)
     {
-        //
+        return City::select('name', 'code')->where('name', 'like', '%'.$name.'%')->first();
     }
 
     /**
