@@ -24,7 +24,12 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:cities',
+            'code' =>'required|min:3|max:3|unique:cities'
+        ]);
+
+        return City::create($request->all());
     }
 
     /**
@@ -38,6 +43,10 @@ class CityController extends Controller
         return City::select('name', 'code')->where('name', 'like', '%'.$name.'%')->first();
     }
 
+    public function show_name($code)
+    {
+        return City::select('name', 'code')->where('code', $code)->first();
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -56,8 +65,9 @@ class CityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($code)
     {
-        //
+        $id = City::select('id')->where('code', $code)->first();
+        return City::destroy($id['id']);
     }
 }
