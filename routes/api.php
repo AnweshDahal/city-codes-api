@@ -34,6 +34,9 @@ Route::post('/city', [CityController::class, 'store']);
 // Delete city
 Route::delete('/city/{code}', [CityController::class, 'destroy']);
 
+// Update City
+Route::put('/city/{code}', [CityController::class, 'update']);
+
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

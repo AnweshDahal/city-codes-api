@@ -54,9 +54,14 @@ class CityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $code)
     {
-        //
+        $city = City::where('code', $code)->first();
+//        return $city->id;
+//        $city = City::find($city->id);
+//        return $city;
+        $city->update($request->all());
+        return $city;
     }
 
     /**
